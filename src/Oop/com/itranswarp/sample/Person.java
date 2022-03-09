@@ -1,6 +1,6 @@
 package Oop.com.itranswarp.sample;
 
-public class Person {
+class Person {
 
 	String name;
 
