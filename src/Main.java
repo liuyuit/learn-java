@@ -1,21 +1,20 @@
+import java.io.*;
+
 public class Main {
-    public static void main(String[] args) {
-        Outer outer = new Outer("Nested"); // 实例化一个Outer
-        Outer.Inner inner = outer.new Inner(); // 实例化一个Inner
-        inner.hello();
-    }
-}
-
-class Outer {
-    private String name;
-
-    Outer(String name) {
-        this.name = name;
-    }
-
-    class Inner {
-        public void hello() {
-            System.out.println("Hello, " + Outer.this.name);
+    public static void main(String[] args) throws IOException {
+        byte[] data = { 72, 101, 108, 108, 111, 33 };
+        try (InputStream input = new ByteArrayInputStream(data)) {
+            String s = readAsString(input);
+            System.out.println(s);
         }
+    }
+
+    public static String readAsString(InputStream input) throws IOException {
+        int n;
+        StringBuilder sb = new StringBuilder();
+        while ((n = input.read()) != -1) {
+            sb.append((char) n);
+        }
+        return sb.toString();
     }
 }
