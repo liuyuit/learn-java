@@ -1,9 +1,23 @@
-import java.io.*;
+package network.socket;
+
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
-public class Main {
+/**
+ * Learn Java from https://www.liaoxuefeng.com/
+ *
+ * @author liaoxuefeng
+ */
+public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocket ss = new ServerSocket(6666); // 监听指定端口
         System.out.println("server is running...");
