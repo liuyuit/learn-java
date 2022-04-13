@@ -10,7 +10,7 @@ import pattern.abstractfactory.service.HtmlDocument;
 import pattern.abstractfactory.service.WordDocument;
 
 /**
- *  java src/pattern/abstract_factory/Main.java
+ *  java src/pattern/abstractfactory/Main.java
  * Learn Java from https://www.liaoxuefeng.com/
  * 
  * @author liaoxuefeng
